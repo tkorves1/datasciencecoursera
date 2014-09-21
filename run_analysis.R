@@ -17,7 +17,7 @@ for (i in temp){
 }
 #list.files("./Cdata")
 
-###start here for new work
+#Read in data
 
 testData<-read.table("./Cdata/UCI HAR Dataset/test/X_test.txt",header=FALSE)
 trainingData<-read.table("./Cdata/UCI HAR Dataset/train/X_train.txt",header=FALSE)
@@ -106,13 +106,14 @@ colnames(DataAll)[2]<-"Subject"
 
 #Melt data into a dataframe with the measurements broken down on separate lines
 
+#install.packages("reshape2")
 library(reshape2)
 
 mDataAll<-melt(DataAll,id=c("Activity","Subject"))
 
 
 #Calculate the mean for each measurement for each activity-subject pair
-
+#install.packages("plyr")
 library(plyr)
 meanset<-ddply(mDataAll,.(variable,Activity,Subject),summarise,Mean=mean(value))
 colnames(meanset)[1]<-"Measurement"

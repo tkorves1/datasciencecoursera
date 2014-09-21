@@ -4,6 +4,7 @@
 
 ###This script creates some summary data from the dataset called Human Activity Recognition Using Smartphones Datase.  It selects the mean and standard deviation measurements for each of the features measured in the dataset and calculates means for each of these for each activity-human subject pair.
 
+Note: This script assumes that the packages reshape2 and plyr have been installed.  
 
 ###Download the data files from the URL and unzip
 
@@ -151,6 +152,7 @@ colnames(DataAll)[2]<-"Subject"
 Melt data into a dataframe with the different measurement variables listed in a single colm
 
 ```{r}
+#install.packages("reshape2")
 library(reshape2)
 
 mDataAll<-melt(DataAll,id=c("Activity","Subject"))
@@ -160,6 +162,7 @@ mDataAll<-melt(DataAll,id=c("Activity","Subject"))
 Then calculate the mean for each measurement for each activity-subject pair using ddply
 
 ```{r}
+#install.packages("plyr")
 library(plyr)
 meanset<-ddply(mDataAll,.(variable,Activity,Subject),summarise,Mean=mean(value))
 colnames(meanset)[1]<-"Measurement"
