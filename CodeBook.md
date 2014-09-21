@@ -1,15 +1,15 @@
-##Codebook- Human Activity Recognition Using Smartphones Dataset
-Means for Measurements by Activity and Subject
+##Codebook- Human Activity Recognition Using Smartphones Dataset:
+##Means for Measurements by Activity and Subject
 
-##1 Measurement
+### Measurement
 
-### The measured features.  There are four kinds of features measured:  Body Acceleration Signal (BodyAccelerationSignal), Body Acceleration Jerk Component (BodyAccelJerkSignal), Body Acceleration Gravity Component (BodyAccelGyroSignal), and Gravity Acceleration Signal (GravityAccelerationSignal)
-##A leading t indicates a feature with a time domain measurement; these were not Fourier transformed
-### A leading f indicates that the measurement variable is Fast Fourier Transformed 
-### Mag is short for magnitude
-### X, Y, Z indicates that the measurement is a raw signal in the X, Y , or Z axis
-### mean() indicates that the base feature is a mean of measurements
-### std() indicates that the base feature is a standard deviation of measurements
+The measured features.  There are four kinds of features measured:  Body Acceleration Signal (BodyAccelerationSignal), Body Acceleration Jerk Component (BodyAccelJerkSignal), Body Acceleration Gravity Component (BodyAccelGyroSignal), and Gravity Acceleration Signal (GravityAccelerationSignal)
+A leading t indicates a feature with a time domain measurement; these were not Fourier transformed
+A leading f indicates that the measurement variable is Fast Fourier Transformed 
+Mag is short for magnitude
+X, Y, Z indicates that the measurement is a raw signal in the X, Y , or Z axis
+mean() indicates that the base feature is a mean of measurements
+std() indicates that the base feature is a standard deviation of measurements
  
 * "1" "fBodyAccelerationSignal-mean()-X"
 * "2" "fBodyAccelerationSignal-mean()-Y"
@@ -78,7 +78,7 @@ Means for Measurements by Activity and Subject
 * "65" "tGravityAccMag-mean()"
 * "66" "tGravityAccMag-std()"
 
-## Activity
+### Activity
 * 1 WALKING
 * 2 WALKING_UPSTAIRS
 * 3 WALKING_DOWNSTAIRS
@@ -87,10 +87,10 @@ Means for Measurements by Activity and Subject
 * 6 LAYING
 
 
-## Subject
+### Subject
 * Subject person number, 1 to 30
 
-## Mean
+### Mean
 * Mean of feature for the activity and subject listed
 * The initial measures were time domain measures, from which means or standard deviations were taken. These were then normalized.  These normalized values are averaged for activity and subject here.   
 
